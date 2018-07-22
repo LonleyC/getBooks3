@@ -1,6 +1,7 @@
 package com.example.ananthu.getbooks3;
 
 import android.Manifest;
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -46,6 +47,10 @@ public class LandingPage extends AppCompatActivity {
         setContentView(R.layout.activity_landing_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // database builders
+//        AuthorDB mAuthorDB = Room.databaseBuilder(getApplicationContext(),
+//                AuthorDB.class, "goodreads_db").build();
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewLandingPage);
 
